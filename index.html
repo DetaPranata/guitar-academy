@@ -8,7 +8,7 @@
     <meta property="og:image" content="https://DetaPranata.github.io/AcademyMusic/images/guitar.jpg">
     <meta property="og:url" content="https://DetaPranata.github.io/AcademyMusic/">
     <meta property="og:type" content="website">
-    <title>Deta Guitar Academy</title>
+    <title>Guitar Academy | Deta Pranata</title>
     <!--Style-->
     <link rel="stylesheet" href="CSS/style.css">
     <!-- Fonts -->
@@ -17,13 +17,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- HERO -->
     <header>
         <div class="container">
             <h1>Deta Guitar Academy</h1>
             <p>Belajar gitar dengan mudah dan cepat!</p>
         </div>
     </header>
+    <!-- HERO END -->
 
+    <!-- PACKAGE -->
     <section id="courses" class="portfolio-section">
         <div class="container">
             <h2>Paket Kursus</h2>
@@ -40,7 +43,7 @@
                     </ul>
                 </p>
                 <p>Tujuan: Menguasai kunci dasar dan memainkan beberapa lagu sederhana dengan chord dasar.</p>
-              <a href="form A.html" class="cta-button">Daftar Paket Junior</a>
+              <a  onclick="formPackageSelect('junior')" href="#formPackage" class="cta-button">Daftar Paket Junior</a>
             </div>
 
             <div class="course">
@@ -55,7 +58,7 @@
                     </ul>
                 </p>
                 <p>Tujuan: Menguasai chord barre dan meningkatkan kemampuan petikan.</p>
-                <a href="form B.html" class="cta-button">Daftar Paket Senior</a>
+                <a onclick="formPackageSelect('senior')" href="#formPackage" class="cta-button">Daftar Paket Senior</a>
             </div>
 
             <div class="course">
@@ -71,15 +74,49 @@
                     </ul>
                 </p>
                 <p>Tujuan: Bisa memainkan melodi sederhana dan berimprovisasi dengan baik.</p>
-                <a href="form C.html" class="cta-button">Daftar Paket Master</a>
+                <a onclick="formPackageSelect('master')" href="#formPackage" class="cta-button">Daftar Paket Master</a>
             </div>
         </div>
     </section>
+    <!-- PACKAGE END -->
 
+    <!-- FORM -->
+    <div class="form-container">
+    <form id="formPackage" action="mailto:adetarakapranata123@gmail.com" method="post" enctype="text/plain">
+      <div class="form-text">
+      <h2>Daftar Kursus Gitar</h2>
+
+      <label for="name">Nama Lengkap:</label>
+      <input type="text" id="name" name="name" required placeholder="Masukkan nama lengkap Anda">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required placeholder="Masukkan email Anda">
+
+      <label for="phone">Nomor Telepon:</label>
+      <input type="tel" id="phone" name="phone" required placeholder="Masukkan nomor telepon">
+
+      <label for="package">Pilih Paket Kursus:</label>
+      <select id="package" name="package" required>
+        <option  value="junior">Paket Junior: Rp100.000</option>
+        <option  value="senior">Paket Senior: Rp300.000</option>
+        <option  value="master">Paket Master: Rp500.000</option>
+      </select>
+
+      <label for="message">Pesan atau Pertanyaan (Opsional):</label>
+      <textarea id="message" name="message" rows="4" placeholder="Tulis pesan atau pertanyaan Anda (opsional)"></textarea>
+
+      <button type="submit">Daftar Sekarang</button>
+      </div>
+    </form>
+  </div>
+    <!-- FORM END -->
+    
+    <!-- FOOTER -->
     <footer>
         <div class="container-footer">
             <p>&copy; 2024 Deta Guitar Academy</p>
         </div>
     </footer>
+    <!-- FOOTER END -->
 </body>
 </html>
